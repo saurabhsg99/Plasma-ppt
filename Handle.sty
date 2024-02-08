@@ -1,0 +1,259 @@
+
+	% Themes
+
+	\usetheme{Frankfurt}
+	\usecolortheme{dolphin}
+	\useoutertheme[subsection=false]{miniframes}
+	\useinnertheme{circles}
+
+
+	% Packages
+
+	\usepackage{hyperref}
+	\usepackage{xcolor}
+	\usepackage{color}
+	\usepackage{setspace}
+	\usepackage{graphicx}
+	\usepackage{background}
+\usepackage{wrapfig}
+	\usepackage{algorithm}
+	\usepackage{algpseudocode}
+	\usepackage{shadowtext}
+	\usepackage{stackengine}
+	\usepackage{tikz}
+	\usepackage{textpos}
+	\usepackage{listings}
+	\definecolor{codegreen}{rgb}{0,0.6,0}
+	\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+	\definecolor{codepurple}{rgb}{0.58,0,0.82}
+	\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+	% colors definition
+
+
+
+	\definecolor{americanrose}{rgb}{1.0, 0.01, 0.24}
+	\definecolor{arsenic}{rgb}{0.23, 0.27, 0.29}
+	\definecolor{airforceblue}{rgb}{0.36, 0.54, 0.66}
+	\definecolor{aqua}{rgb}{0.0, 1.0, 1.0}
+	\definecolor{auburn}{rgb}{0.43, 0.21, 0.1}
+	\definecolor{bananayellow}{rgb}{1.0, 0.88, 0.21}
+	\definecolor{aliceblue}{rgb}{0.94, 0.97, 1.0}
+	\definecolor{fluorescentorange}{rgb}{1.0, 0.75, 0.0}
+	\definecolor{brown(web)}{rgb}{0.65, 0.16, 0.16}
+	\definecolor{darkorchid}{rgb}{0.6, 0.2, 0.8}
+	\definecolor{cyan(process)}{rgb}{0.0, 0.72, 0.92}
+	\definecolor{darkbrown}{rgb}{0.4, 0.26, 0.13}
+	\definecolor{aurometalsaurus}{rgb}{0.43, 0.5, 0.5}
+	\definecolor{splashedwhite}{rgb}{1.0, 0.99, 1.0}
+	\definecolor{blue(ryb)}{rgb}{0.01, 0.28, 1.0}
+	\definecolor{blue(pigment)}{rgb}{0.2, 0.2, 0.6}
+	\definecolor{darkpastelgreen}{rgb}{0.01, 0.75, 0.24}
+	\definecolor{brightgreen}{rgb}{0.4, 1.0, 0.0}
+	\definecolor{brightube}{rgb}{0.82, 0.62, 0.91}
+	\definecolor{brilliantlavender}{rgb}{0.96, 0.73, 1.0}
+	\definecolor{carminepink}{rgb}{0.92, 0.3, 0.26}
+	\definecolor{carminered}{rgb}{1.0, 0.0, 0.22}
+	\definecolor{deeplilac}{rgb}{0.6, 0.33, 0.73}
+	\definecolor{deepmagenta}{rgb}{0.8, 0.0, 0.8}
+	\definecolor{saffron}{rgb}{0.96, 0.77, 0.19}
+	\definecolor{amethyst}{rgb}{0.6, 0.4, 0.8}
+	\definecolor{byzantine}{rgb}{0.74, 0.2, 0.64}
+	\definecolor{byzantium}{rgb}{0.44, 0.16, 0.39}
+	\definecolor{harlequin}{rgb}{0.25, 1.0, 0.0}
+	\definecolor{antiquefuchsia}{rgb}{0.57, 0.36, 0.51}
+	\definecolor{auburn}{rgb}{0.43, 0.21, 0.1}
+
+
+
+	%Title page
+	\newcommand{\MakeTitle}{
+		\vspace{-1cm}
+
+	\title{
+
+		\LARGE\sffamily%
+		\def\primarycolor{blue!70!black}%
+		\def\secondarycolor{cyan!25}%
+		\def\shadowHoffset{1.9pt}%
+		\def\shadowVoffset{-1.9pt}%
+		\Huge
+		\textbf{\shadowfy{\Title}}
+	}
+	\subtitle{
+		\Large
+		\vspace{0.5cm}
+		\color{arsenic}\textbf{	\underline{\Subtitle}}
+		\vspace{-1cm}}
+	\institute{
+		\small  \ \LARGE\sffamily%
+		\def\primarycolor{auburn!70!auburn}%
+		\def\secondarycolor{amethyst!55}%
+		\def\shadowHoffset{.5pt}%
+		\def\shadowVoffset{-.8pt}%
+		\large
+		\shadowfy{ \Institute}\\
+		\shadowfy{ \InstituteAddress}
+		\newline
+	}
+	\maketitle
+	\vspace{-1.5cm}
+	\large{
+		\begin{columns}
+
+			\column{0.3\textwidth}
+
+			\color{black}\textbf{Submitted By :} \\
+			\hspace{2mm}\SubmittedBy
+
+			\column{0.36\textwidth}
+			\color{black} \textbf{Submitted To : }\\
+			\hspace{2mm}\SubmittedTo
+		\end{columns}
+%	\begin{tikzpicture}[remember picture, overlay]
+%	\node[opacity = 0.08] at (current page.center)
+%	{
+%		\includegraphics[height = 0.86\paperwidth]{Images/p.png}
+%	};
+%\end{tikzpicture}
+
+	}
+	}
+
+
+
+	% Progress Bar
+	\newcommand{\progressbar}{
+		\pgfmathsetmacro{\theta}{360/\inserttotalframenumber*\insertframenumber}
+		\begin{tikzpicture}[scale=0.05]
+			\fill[yellow] (0,0) circle (9);
+			\fill[red] (0,0) -- (9,0) arc (0:-\theta:9);
+			\fill[white] (0,0) circle (5);
+			\node at (0,0) {\insertframenumber};
+		\end{tikzpicture}
+	}
+
+
+	%Footline
+	\setbeamertemplate{footline}	{
+		\hbox{
+			\begin{beamercolorbox}[wd=4cm,ht=7.8pt,dp=3pt,center]{title in head/foot}\insertsection
+			\end{beamercolorbox}%
+			\begin{beamercolorbox}[wd=7.5cm,ht=7.8pt,dp=3pt,center]{author in head/foot}Graphs
+			\end{beamercolorbox}%
+			\hfill \progressbar
+		}
+		}
+		\setbeamertemplate{arrow symbols}{}
+		\setbeamertemplate{navigation symbols}{}
+
+
+
+%frame title
+	\setbeamertemplate{frametitle}[default][left,leftskip = 10mm]
+		\newcounter{cont}
+		\makeatletter
+
+
+
+%allowframebreaks numbering in the title
+	\setbeamertemplate{frametitle continuation}{%
+		\setcounter{cont}{\beamer@endpageofframe}%
+		\addtocounter{cont}{1}%
+		\addtocounter{cont}{-\beamer@startpageofframe}%
+		\small(\insertcontinuationcount/\arabic{cont})%
+	}
+	\makeatother
+
+
+%Background Image
+\setbeamertemplate{background}
+	{
+	\begin{tikzpicture}[remember picture, overlay]
+		\node[opacity = 0.08] at (current page.center)
+		{
+			\includegraphics[width = \paperwidth,height = \paperwidth]{\ImageUrl}
+
+		};
+	\end{tikzpicture}
+	}
+
+
+
+
+
+
+
+	\newcommand\shadowfy[1]{\expandafter\shadowfypars#1\par\relax\relax}
+	\long\def\shadowfypars#1\par#2\relax{%
+	\ifx#1\relax\else
+	\shadowfywords#1 \relax\relax%
+	\fi%
+	\ifx\relax#2\else\par\shadowfypars#2\relax\fi%
+	}
+	\def\shadowfywords#1 #2\relax{%
+	\ifx#1\relax\else
+	\shadowfyletters#1\relax\relax%
+	\fi%
+	\ifx\relax#2\else\ \shadowfywords#2\relax\fi%
+	}
+	\def\shadowfyletters#1#2\relax{%
+	\shadow{#1}%
+	\ifx\relax#2\else\shadowfyletters#2\relax\fi}
+
+	\newlength\shadowHoffset
+	\newlength\shadowVoffset
+	\setlength\shadowHoffset{.3pt}
+	\setlength\shadowVoffset{-.2pt}
+	\def\primarycolor{white}
+	\def\secondarycolor{black}
+
+	\def\shadow#1{\kern\shadowHoffset%
+	\raisebox{\shadowVoffset}{%
+		\stackinset{c}{-\shadowHoffset}{c}{-\shadowVoffset}%
+		{\textcolor{\primarycolor}{#1}}{\textcolor{\secondarycolor}{#1}}}%
+	\kern-\shadowHoffset}
+
+\usepackage[most]{tcolorbox} %boxes
+
+\newtcolorbox{tbee}[3][] %minimalist box design
+{
+	enhanced,attach boxed title to top left={xshift=4mm,yshift=-3mm,yshifttext=-1mm},
+	colback=white,
+	colframe=#3,
+	colbacktitle=#3,
+	coltitle=#2,
+	arc=4mm,boxrule=2pt,
+	title= #1,
+	fonttitle = \fontfamily{qag}\selectfont\large\bfseries,
+	halign=flush left,
+	boxed title style={size=small,colframe=white,arc=2mm}
+}
+\newtcolorbox{rtbee}[3][left] %minimalist box design
+{
+	enhanced,attach boxed title to top right={xshift=-4mm,yshift=-3mm,yshifttext=-1mm},
+	colback=white,
+	colframe=#3,
+	colbacktitle=#3,
+	coltitle=#2,
+	arc=4mm,boxrule=2pt,
+	% width = 5cm,
+	title= #1,
+	fonttitle = \fontfamily{qag}\selectfont\large\bfseries,
+	halign=flush left,
+	boxed title style={size=small,colframe=white,arc=2mm}
+}
+
+\newenvironment{bee}[3][]{
+	\begin{tbee}[#1]{#2}{#3}
+	}
+	{
+	\end{tbee}
+}
+\newenvironment{Rbee}[3][]{
+	\begin{rtbee}[#1]{#2}{#3}
+	}
+	{
+	\end{rtbee}
+}
+
